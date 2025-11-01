@@ -81,10 +81,18 @@ export default {
           busy: "rgb(239 68 68)",
           offline: "rgb(156 163 175)",
         },
+        mediterranean: {
+          blue: "#0A4D8C",
+          turquoise: "#00BCD4",
+          beige: "#F5E6D3",
+          orange: "#FF6B35",
+          "dark-gray": "#2C3E50",
+          "light-gray": "#ECF0F1",
+        },
       },
       fontFamily: {
-        sans: ["var(--font-sans)"],
-        serif: ["var(--font-serif)"],
+        sans: ["Inter", "var(--font-sans)"],
+        serif: ["Playfair Display", "Lora", "var(--font-serif)"],
         mono: ["var(--font-mono)"],
       },
       keyframes: {
