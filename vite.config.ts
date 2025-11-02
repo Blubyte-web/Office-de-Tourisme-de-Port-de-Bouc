@@ -35,9 +35,15 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
+    host: true,
+    port: parseInt(process.env.PORT || "5000", 10),
+    strictPort: true,
     fs: {
       strict: true,
       deny: ["**/.*"],
+    },
+    hmr: {
+      overlay: false,
     },
   },
 });
