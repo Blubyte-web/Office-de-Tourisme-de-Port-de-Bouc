@@ -7,8 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     runtimeErrorOverlay(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
+    ...(process.env.NODE_ENV !== "production" && process.env.REPL_ID
       ? [
           await import("@replit/vite-plugin-cartographer").then((m) =>
             m.cartographer(),
@@ -43,7 +42,7 @@ export default defineConfig({
       deny: ["**/.*"],
     },
     hmr: {
-      overlay: false,
+      overlay: false, // disattiva l'overlay degli errori runtime
     },
   },
 });
